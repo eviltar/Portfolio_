@@ -9,10 +9,10 @@
 </head>
 <style>
     nav{
-        background-color: white;
+        background-color: #14351a;
     }
     .navbar-brand{
-      color:#0e0f37;
+      color:#fdfd96;
       font-weight: bold;
     }
     .navbar-nav > li{
@@ -20,15 +20,29 @@
       padding-right:20px;
     }
     li a:hover{
-      background-color: #DAD2E9;
+      background-color: #fdfd96;
       border-radius: 5px;
+    }
+    .nav-link{
+      color: white;
+    }
+    #MSN{
+      color:white;
+    }
+    #MSN:hover{
+      color:black;
+      background-color: #fdfd96;
+      border-radius: 5px;
+    }
+    .navbar-toggler-icon{
+      color:#fdfd96;
     }
 </style>
 <body>
 <nav class="navbar navbar-expand-sm py-3">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">DOHYUN</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#my_navbar">
+    <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#my_navbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="my_navbar">
@@ -46,10 +60,16 @@
           <a class="nav-link" href="#">Contact</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2 p-2" type="text" placeholder="Search">
-        <button type="button" class="btn text-white" id="btn1" style="background-color:#453354;">Search</button>
-      </form>
+      <div class="dropdown">
+        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" id="MSN">
+          My_Social_Network
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Instagram</a></li>
+          <li><a class="dropdown-item" href="#">NAVER_Blog</a></li>
+          <li><a class="dropdown-item" href="#">GitHub</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
