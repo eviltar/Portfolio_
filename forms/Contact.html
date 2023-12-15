@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOHYUN</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+  .b{
+    margin-bottom:50px;
+    }
+  .c{
+    margin-bottom:170px;
+  }
+
+</style>
+<script>
+window.addEventListener("load", function() {
+    var all_elements = document.getElementsByTagName('*') ;
+    Array.prototype.forEach.call(all_elements, function(el) {
+        var includePath = el.dataset.includePath;
+        if (includePath) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState==4 && this.status==200) {
+                    el.outerHTML = this.responseText;
+                }
+            } ;
+            xhttp.open('GET', includePath, true) ;
+            xhttp.send() ;
+        }
+    }) ;
+}) ;
+</script>
+<body>
+<nav data-include-path="menu.html"></nav>
+<div class="b"></div>
+<header>
+    <div class="text-center h2 text-decoration-underline" id="top"><b>Contact Me</b></div>
+    <div class="b"></div>
+</header>
+<hr>
+<!--Form, Button-->
+<main class="container-fluid">
+  <div class="border border-3 border-dark rounded-pill row h-100 d-flex align-items-center justify-content-center">
+        <p></p>
+        <div class="col-sm-4 my-sm-auto">
+            <h3><b>DONGDUK W.UNIV ADDRESS</b></h3>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3160.8019231021954!2d127.03980827667498!3d37.60682052181579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbb7f99870231%3A0x385ba8fa17b75534!2z64-Z642V7Jes7J6Q64yA7ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1702654642579!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                동덕여대
+             </iframe>
+        </div>
+        <div class="col-sm-4 pt-3 my-sm-auto">
+            <form>
+                <p class="text-bg-success my-2 p-2">기본 정보를 작성하시오.</p>
+                <div class="mb-2 mt-2">
+                    <label for="user_name" class="form-label">이 름<span class="text-danger"> *</span></label>
+                    <input type="text" class="form-control" id="user_name">
+                </div>
+                <div class="mb-2 mt-2">
+                    <label for="user_email" class="form-label">이메일<span class="text-danger"> *</span></label>
+                    <input type="email" class="form-control" placeholder="id@domain_name" id="user_email">
+                </div>
+                <div class="mb-2 mt-2">
+                    <label for="usr_phone" class="form-label">모바일 폰<span class="text-danger"> *</span></label>
+                    <input type="tel" class="form-control" placeholder="010-0000-0000" id="usr_phone">
+                </div>
+                <div class="mb-2">
+                    <label for="comment" class="form-label mt-2 mb-2"></label>
+                    <textarea rows="10" class="form-control" id="comment" name="text">하고싶은 말을 적으시오.</textarea>
+                </div>
+                <div class="my-3 text-center">
+                    <button type="submit" class="btn btn-outline-primary">제 출</button>
+                    <button type="reset" class="btn btn-outline-primary">재작성</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+<div class="c"></div>
+<footer data-include-path="footer.html"></footer>
+<script src="js/get_tags.js"></script>
+</body>
+</html>

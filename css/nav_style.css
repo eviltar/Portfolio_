@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+nav{
+    background-color: #152715;
+    padding-block: 10px;
+}
+#nav-brand{
+    color:#c07c0f;
+    font-weight: bold;
+    padding-left:15px;
+}
+.navbar-nav > li{
+    padding-left:20px;
+    padding-right:20px;
+}
+li a:hover{
+    color:black !important;
+    background-color: #c07c0f;
+    border-radius: 5px;
+}
+#MSN{color:white;}
+#MSN:hover{
+    color:black;
+    background-color: #c07c0f;
+    border-radius: 5px;
+}
