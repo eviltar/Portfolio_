@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOHYUN</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    .s{
+        margin-top:50px;
+    }
+    p{
+        text-align: center;
+        text-decoration-color: #152715;
+        text-decoration-line: underline;
+    }
+</style>
+<script>
+window.addEventListener("load", function() {
+    var all_elements = document.getElementsByTagName('*') ;
+    Array.prototype.forEach.call(all_elements, function(el) {
+        var includePath = el.dataset.includePath;
+        if (includePath) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState==4 && this.status==200) {
+                    el.outerHTML = this.responseText;
+                }
+            } ;
+            xhttp.open('GET', includePath, true) ;
+            xhttp.send() ;
+        }
+    }) ;
+}) ;
+
+</script>
+<body>
+<nav data-include-path="menu.html"></nav>
+
+<br>
+<header>
+    <div class="text-center h2 text-decoration-underline" id="top">HOBBY - (1)READ NOVEL</div>
+</header>
+<hr>
+<br>
+<!--img,Grid, Collapse-->
+<main class="container-fluid">
+    <div class="border border-3 border-dark row h-100 d-flex align-items-center justify-content-center">
+        <div class="col-sm-3 img-fluid">
+            <img src="../img/novel_1.jpg" alt="novel_1">
+            <p>[[화산귀환]] </p>
+            <a href="#novel_1" class="btn btn-success d-flex align-items-center justify-content-center" data-bs-toggle="collapse">Click me!</a>
+            <div id="novel_1" class="collapse">
+                대 화산파 13대 제자. 천하삼대검수(天下三代劍手). 매화검존(梅花劍尊) 청명(靑明) 천하를 혼란에 빠뜨린 고금제일마 천마(天魔)의 목을 치고 십만대산의 정상에서 영면. 백 년의 시간을 뛰어넘어 아이의 몸으로 다시 살아나다.
+                그런데...... 뭐? 화산이 망해? 이게 뭔 개소리야!? 망했으면 살려야 하는 게 인지상정. "망해? 내가 있는데? 누구 맘대로!" 언제고 매화는 지기 마련. 하지만 시린 겨울이 지나고 봄이 오면 매화는 다시 만산에 흐드러지게 피어난다.
+                "그런데 화산이 다시 살기 전에 내가 먼저 뒈지겠다! 망해도 적당히 망해야지, 이놈들아!" 쫄딱 망해버린 화산파를 살리기 위한 매화검존 청명의 고군분투가 시작된다.
+            </div>
+        </div>
+
+        <div class="col-sm-3 img-fluid">
+            <img src="../img/novel_2.jpg" alt="novel_2">
+            <p>[[전지적 독자 시점]] </p>
+            <a href="#novel_2" class="btn btn-success d-flex align-items-center justify-content-center" data-bs-toggle="collapse">Click me!</a>
+            <div id="novel_2" class="collapse">
+                [오직 나만이, 이 세계의 결말을 알고 있다.] 무려 3149편에 달하는 장편 판타지 소설, '멸망한 세계에서 살아남는 세 가지 방법'이 현실이 되어버렸다. 그리고 그 작품을 완독한 이는 단 한 명뿐이었다.
+            </div>
+        </div>
+
+        <div class="col-sm-3 img-fluid">
+            <img src="../img/novel_3.jpg" alt="novel_3">
+            <p>[[데뷔 못하면 죽는병 걸림]] </p>
+            <a href="#novel_3" class="btn btn-success d-flex align-items-center justify-content-center" data-bs-toggle="collapse">Click me!</a>
+            <div id="novel_3" class="collapse">
+                4년차 공시생,
+                낯선 몸에 빙의해 3년 전으로 돌아왔다.
+                그리고 그의 눈앞에 나타난 갑작스러운 상태창의 협박!
+                [돌발!] [상태이상 : '데뷔가 아니면 죽음을' 발생!]
+                돌연사 위협 때문에 팔자에도 없던 아이돌에 도전하게 된 주인공의 대환장 일지.
+                ※특이사항 : 빙의 전 아이돌 데이터 찍어다 팔았었음
+            </div>
+        </div>
+
+        <div class="col-sm-3 img-fluid">
+            <img src="../img/novel_4.jpg" alt="novel_4">
+            <p>[[내가 키운 S급들]] </p>
+            <a href="#novel_4" class="btn btn-success d-flex align-items-center justify-content-center" data-bs-toggle="collapse">Click me!</a>
+            <div id="novel_4" class="collapse">
+                F급 헌터. 그것도 잘나가는 S급 동생 발목이나 잡는 쓸모없고 찌질한 F급 형.
+                개판 된 인생 대충 살다가 결국 동생 목숨까지 잡아먹고 회귀한 내게 주어진 칭호, '완벽한 양육자'.
+                그래, 이번에는 나대지 말고 얌전히 잘난놈들 뒷바라지나 해 주자. 라고 생각했는데, S급들이 좀 이상하다.
+            </div>
+        </div>
+    </div>
+</main>
+<div class="s"></div>
+
+<div class="d-flex align-items-center justify-content-center">
+    <!--Pagination-->
+    <ul class="pagination">
+        <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+</div>
+<hr>
+<div class="s"></div>
+<footer data-include-path="footer.html"></footer>
+<script src="js/get_tags.js"></script>
+</body>
+</html>
