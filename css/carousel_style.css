@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+.carousel-caption{
+        font-weight:bold;
+        background-color: rgba(0,0,0,0.7);
+    }
+/***small device only***/
+@media(max-width:767px){
+      h1{font-size: 10px;}
+      h3{font-size: 7px}
+    .carousel-caption{background-color: rgba(0,0,0,0);}
+    }
+#CS .carousel-item img{
+      object-fit: cover;
+      object-position: center;
+      height: 1000px;
+      overflow:hidden;
+    }

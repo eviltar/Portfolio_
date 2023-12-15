@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+#top{font-size:40px;}
+#bl{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+#bl2{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+#bl3{
+    margin-top:20px;
+    margin-bottom:150px;
+}
+.card{color:black;}
+img{width:360px;}

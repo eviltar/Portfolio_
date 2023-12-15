@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.s{
+    margin-top:50px;
+}
+p{
+    text-align: center;
+    text-decoration-color: #152715;
+    text-decoration-line: underline;
+}
