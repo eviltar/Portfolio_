@@ -10,7 +10,7 @@ p{
 }
 /***small device only***/
 @media(max-width:767px){
-      figure > img{
+      img{
           display: block;
           margin-left: auto;
           margin-right: auto;
