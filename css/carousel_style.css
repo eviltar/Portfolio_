@@ -13,6 +13,6 @@
 #CS .carousel-item img{
       object-fit: cover;
       object-position: center;
-      height: 1000px;
+      height: 800px;
       overflow:hidden;
     }
