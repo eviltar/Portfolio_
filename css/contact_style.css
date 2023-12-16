@@ -6,3 +6,16 @@
 .c{
     margin-bottom:170px;
 }
+/***small device only***/
+@media(max-width:767px){
+      iframe{
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 70%;
+          height:90%;
+      }
+    #contact_a{
+        text-align: center;
+    }
+    }

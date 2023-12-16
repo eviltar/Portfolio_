@@ -8,3 +8,12 @@ p{
     text-decoration-color: #152715;
     text-decoration-line: underline;
 }
+/***small device only***/
+@media(max-width:767px){
+      img{
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+      }
+    }
